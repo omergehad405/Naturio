@@ -26,15 +26,14 @@ import Login from "./Pages/RegisterPage/Login";
 import Signup from "./Pages/RegisterPage/Signup";
 
 function App() {
-  const location = useLocation();
-  const registerPage =
-    location.pathname === "/register" ||
-    location.pathname === "/register/signup";
+  // const location = useLocation();
+  // const registerPage =
+  //   location.pathname === "/register" ||
+  //   location.pathname === "/register/signup";
   return (
     <div>
-      {!registerPage && <Navbar />}
-      {!registerPage && <Header />}
-
+      {/* {!registerPage && <Navbar />}
+      {!registerPage && <Header />}{" "} */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -55,7 +54,7 @@ function App() {
           <Route path="/register/signup" element={<Signup />} />
         </Route>
       </Routes>
-      {!registerPage && <Footer />}
+      {/* {!registerPage && <Footer />} */}
     </div>
   );
 }
