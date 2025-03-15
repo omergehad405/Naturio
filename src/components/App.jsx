@@ -21,19 +21,11 @@ import ContactPage from "./Pages/ContactPage/ContactPage";
 import SecondPage from "./Pages/ShopPage/ProductsPages/SecondPage";
 import ThirdPage from "./Pages/ShopPage/ProductsPages/ThirdPage";
 
-import RegisterPage from "./Pages/RegisterPage/RegesterPage";
-import Login from "./Pages/RegisterPage/Login";
-import Signup from "./Pages/RegisterPage/Signup";
-
 function App() {
-  // const location = useLocation();
-  // const registerPage =
-  //   location.pathname === "/register" ||
-  //   location.pathname === "/register/signup";
   return (
     <div>
-      {/* {!registerPage && <Navbar />}
-      {!registerPage && <Header />}{" "} */}
+      <Navbar />
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -49,12 +41,8 @@ function App() {
           <Route path=":productId" element={<ProductDetails />} />
         </Route>
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/register" element={<RegisterPage />}>
-          <Route index element={<Login />} />
-          <Route path="/register/signup" element={<Signup />} />
-        </Route>
       </Routes>
-      {/* {!registerPage && <Footer />} */}
+      <Footer />
     </div>
   );
 }
