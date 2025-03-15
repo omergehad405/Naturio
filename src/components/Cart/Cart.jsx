@@ -31,7 +31,7 @@ function Cart({ handleCloseCart }) {
               </div>
               <div className="product_quantity">
                 <button onClick={() => decreaseQuantity(item.id)}>-</button>
-                {item.quantity}
+                <span>{item.quantity}</span>
                 <button onClick={() => increaseQuantity(item.id)}>+</button>
               </div>
             </div>
